@@ -31,7 +31,7 @@ profile_urls = [
 urlpatterns = [
     path('',
          views.index, name='index'),
-    path('category/<slug:category_slug>/',
+    path('category/<str:category_slug>/',  # ИЗМЕНЕНО: slug -> str
          views.category_posts, name='category_posts'),
     path('posts/', include(post_urls)),
     path('profile/', include(profile_urls)),
